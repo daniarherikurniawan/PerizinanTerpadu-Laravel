@@ -13,17 +13,17 @@
 					<div class="form-group col-sm-8">
 				      <label class="col-sm-3 col-sm-3 control-label">Email</label>
 				      <div class="col-sm-9">
-				          <input type="text" name='email' class="form-control" required>
+				          <input type="email" name="email" class="form-control" required>
 				      </div>
 				  </div>
 
+					<br>
 		        	<div class="form-group col-sm-8">
 				      <label class="col-sm-3 col-sm-3 control-label">Password</label>
 				      <div class="col-sm-9">
 				          <input type="password" name="password" class="form-control" required>
 				      </div>
 				  </div>
-				
 					<div class="row centered">
 			            <label class="checkbox">
 			                <span class="centered">
@@ -55,6 +55,6 @@
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 300});
+        $.backstretch("assets/img/login-bg.png", {speed: 300});
     </script>
 @endsection

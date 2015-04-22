@@ -1410,7 +1410,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 750px;
+    width: 800px;
   }
 }
 .container-fluid {
@@ -2781,8 +2781,8 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  background-color: #DCF3FA;
+  border-color: #DCF3FA;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3130,7 +3130,8 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 63px;
+   
+  right: 0px;
   z-index: 1000;
   display: none;
   float: right;
@@ -3160,13 +3161,13 @@ tbody.collapse.in {
   background-color: #e5e5e5;
 }
 .dropdown-menu > li > a {
-  background-color: #424A5D;
+  background-color: #DCF3FA;
   display: block;
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #FFF;
+  color: #000000;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -4880,8 +4881,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #424A5D;
+  border-color: #FFFFFF;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -4997,7 +4998,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #DCF3FA;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
@@ -5214,12 +5215,12 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ddd;
 }
 .panel-primary {
-  border-color: #428bca;
+  border-color: #424A5D;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #424A5D;
+  border-color: #424A5D;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #428bca;
@@ -5459,8 +5460,8 @@ button.close {
 }
 .modal-footer {
   padding: 15px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  border-top: 1px solid #2C96F7;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;

@@ -21,18 +21,7 @@
                       <td><a href="detailperizinan/ho" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
                       <td><a href="isiform/ho" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
                   </tr>
-                  <tr>
-                      <td>2</td>
-                      <td>Tanda Daftar Perusahaan / TDP</td>
-                      <td><a href="detailperizinan/tdp" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
-                      <td><a href="isiform/tdp" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Tanda Daftar Gudang / TDG</td>
-                      <td><a href="detailperizinan/tdg" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
-                      <td><a href="isiform/tdg" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
-                  </tr>
+                 
                   <tr>
                       <td>4</td>
                       <td>Izin Usaha Perdagangan / SIUP</td>
@@ -45,18 +34,7 @@
                       <td><a href="detailperizinan/iui" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
                       <td><a href="isiform/iui" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
                   </tr>
-                  <tr>
-                      <td>6</td>
-                      <td>Tanda Daftar Industri /TDI</td>
-                      <td><a href="detailperizinan/tdi" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
-                      <td><a href="isiform/tdi" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
-                  </tr>
-                  <tr>
-                      <td>7</td>
-                      <td>Izin Usaha Jasa Konstruksi / IUJK</td>
-                      <td><a href="detailperizinan/iujk" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
-                      <td><a href="isiform/iujk" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
-                  </tr>
+                 
                   <tr>
                       <td>8</td>
                       <td>Izin Mendirikan Bangunan / IMB</td>
@@ -65,15 +43,9 @@
                   </tr>
                   <tr>
                       <td>9</td>
-                      <td>Izin Lokasi</td>
+                      <td>Izin Lokasi / ILO</td>
                       <td><a href="detailperizinan/ilo" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
                       <td><a href="isiform/ilo" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
-                  </tr>
-                  <tr>
-                      <td>10</td>
-                      <td>Izin Penggalian Ruang Milik Jalan (RUMIJA)</td>
-                      <td><a href="detailperizinan/rumija" type="button" class=" text-center btn-sm btn-info">Pelajari</a></td>
-                      <td><a href="isiform/rumija" type="button" class=" text-center btn-sm btn-primary">Isi Sekarang <i class="fa fa-angle-right"></i> </a></td>
                   </tr>
                   </tbody>
               </table>

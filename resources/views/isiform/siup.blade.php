@@ -1,160 +1,181 @@
 @extends("layouts.masterfront")
 @section('content')
-	<div class="inline text-center" ><h3>Formulir Pengajuan Surat Izin Usaha Perdagangan (SIUP)</h3></div>
+<div class="panel panel-primary">
+	<div class="panel-heading inline text-center" ><h3>Formulir Surat Izin Usaha Perdagangan (SIUP)</h3></div>
 	<br>
-	<div class="row">
-		<div class="span3">	</div>
-		<div class="span6">	
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<br><h4 class="panel-title text-info">Identitas Pemilik / Pengurus / Penanggungjawab</h4>
-					</div>
-					<div class="panel-body">
-						<div class=" row form-group">
-							<label class="span2" for="nama">Nama :</label>
-							<input class="span4" type="text" class="form-control" name="nama" id="nama" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="alamatTinggal">Alamat Temapat Tinggal :</label>
-							<input class="span4" type="text" class="form-control" name="alamatTinggal" id="alamatTinggal" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="tempatLahir">Tempat / Tanggal Lahir :</label>
-							<input class="span4" type="text" class="form-control" name="tempatLahir" id="tempatLahir" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="nomorTelepon">Nomor Telepon / Fax :</label>
-							<input class="span4" type="text" class="form-control" name="nomorTelepon" id="nomorTelepon" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="nomorKtp">Nomor KTP / Paspor :</label>
-							<input class="span4" type="text" class="form-control" name="nomorKtp" id="nomorKtp" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="kewarganegaraan">Kewarganegaraan :</label>
-							<input class="span4" type="text" class="form-control" name="kewarganegaraan" id="kewarganegaraan" required>
-						</div>
+	<div class="panel-body">
+		<div class="col-md-2">	</div>
+			{!! Form::open(['url'=>"upload/siup", 'method'=>'PATCH', 'class'=>'form-horizontal'])!!}
+		<div class="col-md-8">
+				<br>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nama :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nama_pemilik" required>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<br><h4 class="panel-title text-info">Identitas Perusahaan</h4>
-					</div>
-					<div class="panel-body">
-						<div class=" row form-group">
-							<label class="span2" for="namaPerusahaan">Nama Perusahaan :</label>
-							<input class="span4" type="text" class="form-control" name="namaPerusahaan" id="namaPerusahaan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="alamatPerusahaan">Alamat Perusahaan :</label>
-							<input class="span4" type="text" class="form-control" name="alamatPerusahaan" id="alamatPerusahaan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="nomorTeleponPerusahaan">Nomor Telepon / Fax :</label>
-							<input class="span4" type="text" class="form-control" name="nomorTeleponPerusahaan" id="nomorTeleponPerusahaan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="provinsi">Provinsi :</label>
-							<input class="span4" type="text" class="form-control" name="provinsi" id="provinsi" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="kabupaten">Kabupaten :</label>
-							<input class="span4" type="text" class="form-control" name="kabupaten" id="kabupaten" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="kecamatan">Kecamatan :</label>
-							<input class="span4" type="text" class="form-control" name="kecamatan" id="kecamatan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="kelurahan">Kelurahan / Desas :</label>
-							<input class="span4" type="text" class="form-control" name="kelurahan" id="kelurahan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="status">Status :</label>
-							<input class="span4" type="text" class="form-control" name="status" id="status" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span2" for="kodepos">Kodepos :</label>
-							<input class="span4" type="text" class="form-control" name="kodepos" id="kodepos" required>
-						</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Alamat Tempat Tinggal :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="alamat_pemilik" required>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<br><h4 class="text-info panel-title">Legalitas Perusahaan</h4>
-					</div>
-					<div class="panel-body">
-						<label>Akta Pendirian</label>
-						<div class=" row form-group">
-							<label class="span3" for="nomorAktaPendirian">Nomor & Tanggal Akta :</label>
-							<input class="span3" type="text" class="form-control" name="nomorAktaPendirian" id="nomorAktaPendirian" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span3" for="nomorPengesahanPendirian">Nomor & Tanggal Pengesahan :</label>
-							<input class="span3" type="text" class="form-control" name="nomorPengesahanPendirian" id="nomorPengesahanPendirian" required>
-						</div>
-						<label>Akta Perubahan</label>
-						<div class=" row form-group">
-							<label class="span3" for="nomorAktaPerubahan">Nomor & Tanggal Akta :</label>
-							<input class="span3" type="text" class="form-control" name="nomorAktaPerubahan" id="nomorAktaPerubahan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span3" for="nomorPengesahanPerubahan">Nomor & Tanggal Pengesahan :</label>
-							<input class="span3" type="text" class="form-control" name="nomorPengesahanPerubahan" id="nomorPengesahanPerubahan" required>
-						</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Tempat/Tanggal Lahir :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="tempat_lahir_pemilik" required>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<br><h4 class=" text-info panel-title">Modal dan Saham</h4>
-					</div>
-					<div class="panel-body">
-						<div class=" row form-group">
-							<label class="span4" for="modalPerusahaan">Modal dan Nilai Kelayakan Bersih Perusahaan :</label>
-							<input class="span2" type="text" class="form-control" name="modalPerusahaan" id="modalPerusahaan" required>
-						</div>
-						<label>Saham</label>
-						<div class=" row form-group">
-							<label class="span3" for="totalSaham">Total Nilai Saham :</label>
-							<input class="span3" type="text" class="form-control" name="totalSaham" id="totalSaham" required>
-						</div>
-						<label>Komposisi Kepemilikan Saham</label>
-						<div class="form-inline">
-							<div class=" row form-group">
-								<label class="span3" for="persenNasional">Nasional:</label>
-								<input class="span3" type="text" class="form-control" name="persenNasional" id="persenNasional" required>
-							</div>
-							<div class=" row form-group">
-								<label class="span3" for="persenAsing">Asing :</label>
-								<input class="span3" type="text" class="form-control" name="persenAsing" id="persenAsing" required>
-							</div>
-						</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor Telepon/Fax :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_telepon_pemilik" required>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<br><h4 class="panel-title text-info">Kegiatan Usaha</h4>
-					</div>
-					<div class="panel-body">
-						<div class=" row form-group">
-							<label class="span3" for="kelembagaan">Kelembagaan :</label>
-							<input class="span3" type="text" class="form-control" name="kelembagaan" id="kelembagaan" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span3" for="kegiatanUsaha">Kegiatan Usaha (KBLI 5 Digit) :</label>
-							<input class="span3" type="text" class="form-control" name="kegiatanUsaha" id="kegiatanUsaha" required>
-						</div>
-						<div class=" row form-group">
-							<label class="span3" for="daganganUtama">Barang/Jasa Dagangan Utama :</label>
-							<input class="span3" type="text" class="form-control" name="daganganUtama" id="daganganUtama" required>
-						</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor KTP/Paspor :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_ktp_pemilik" required>
 					</div>
 				</div>
-				<div class="row">
-					<div class="span5"></div>
-					<button type="submit" class="text-center btn btn-success ">Submit</button>
+				<div class="row form-group"> 
+					<label class="col-md-4 control-label">Kewarganegaraan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kewarganegaraan_pemilik" required>
+					</div>
 				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nama Perusahaan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nama_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Alamat Perusahaan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="alamat_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor Telepon/Fax :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_telepon_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Provinsi :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="provinsi_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kabupaten :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kabupaten_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kecamatan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kecamatan_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kelurahan/Desa :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kelurahan_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Status :</label>
+					<div class="col-md-8">	
+					<select class="form-control" id="bentukPerusahaan" name="status_perusahaan">
+						<option value="PMA">PMA</option>
+						<option value="PMD">PMD</option>
+						<option value="Lainnya">Lainnya</option>
+					</select>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kodepos :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kodepos_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor & Tanggal Akta :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_akta_pendirian" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor & Tanggal Pengesahan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_pengesahan_pendirian" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor & Tanggal Akta :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_akta_perubahan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nomor & Tanggal Pengesahan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="nomor_pengesahan_perubahan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Modal dan Nilai Kekayaan Bersih Perusahaan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="modal_perusahaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Total NIlai Saham :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="total_saham" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Nasional :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="persen_nasional" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Asing :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="persen_asing" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kelembagaan :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kelembagaan" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Kegiatan Usaha :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="kegiatan_usaha" required>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label class="col-md-4 control-label">Barang/Jasa Dagangan Utama :</label>
+					<div class="col-md-8">
+						<input  type="text" class="form-control" name="dagangan_utama" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-offset-4 col-md-8">
+						<button type="submit" class="text-center btn btn-success ">Submit</button>
+					</div>
+				</div>
+		        {!!Form::close()!!}
 		</div>
 		<div class="span3">	</div>
 	</div>
+</div>
 @stop

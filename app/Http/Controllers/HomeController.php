@@ -43,34 +43,41 @@ class HomeController extends Controller {
 
 	public function updateAkun()
 	{
-		 DB::table('users')
-            ->where('id', \Session::get('id'))
-            ->update(array('nama' => (\Request::get('nama')), 'email' => (\Request::get('email')),'password'=>(\Request::get('password')), 'nama_gambar'=>(\Request::get('nama_gambar'))));
+		try{
+			 DB::table('users')
+	            ->where('id', \Session::get('id'))
+	            ->update(array('nama' => (\Request::get('nama')), 'email' => (\Request::get('email')),'password'=>(\Request::get('password')), 'nama_gambar'=>(\Request::get('nama_gambar'))));
 
-        $user = User::find(\Session::get('id'));
-		\Session::forget('nama');
-    	\Session::put('nama', $user->nama);
+	        $user = User::find(\Session::get('id'));
+			\Session::forget('nama');
+	    	\Session::put('nama', $user->nama);
 
-		$str = "Berhasil Mengedit Akun";
-		$url = "home";
-		return view("status.success",compact("str"),compact('url'));
+			$str = "Berhasil Mengedit Akun";
+			$url = "home";
+			return view("status.success",compact("str"),compact('url'));
+		}catch (\Exception $e) {
+        	$str = "Maaf, akun berbeda harus menggunakan email yang berbeda";
+        	$url = "editakun";
+        	return view("status.failed",compact("str"),compact('url'));
+		}
 	}
 	
 	public function checkSignup()
 	{
 		try{
-			$user = new User;
-			$user->nama = (\Request::get('nama'));
-			$user->email = (\Request::get('email'));
-			$user->password = (\Request::get('password'));
-			$user->save();
+			$userx = new User;
+			$userx->nama = (\Request::get('nama'));
+			$userx->email = (\Request::get('email'));
+			$userx->password = (\Request::get('password'));
+			$userx->save();
 
+			$user = DB::table('users')->where('email',  (\Request::get('email')))->first();
 
 	    	\Session::put('id', $user->id);
 	    	\Session::put('peran', $user->peran);
 	    	\Session::put('nama', $user->nama);
 
-			$str = "Berhasil Mendaftarkan Akun";
+			$str = "Berhasil Mendaftarkan Akun ";
 			$url = "home";
 			return view("status.success",compact("str"),compact('url'));
 		}catch (\Exception $e) {
@@ -97,7 +104,10 @@ class HomeController extends Controller {
 	        	$str = "Selamat, ".$user->nama.". Anda berhasil login";
 
 	        	if($user->peran == 1){
-	        		$str = $str." sebagai administrator.";
+	        		$str = $str." sebagai Walikota.";
+	        	}
+	        	if($user->peran == 2){
+	        		$str = $str." sebagai tim teknis BPPT.";
 	        	}
 				$url = "home";
 				return view("status.success",compact("str"),compact('url'));

@@ -16,6 +16,36 @@ Route::get('detailperizinan/{str}', 'PerizinanController@showDetailPerizinan');
 
 Route::get('isiform/{str}', 'PerizinanController@showFormulir');
 
+Route::patch('upload/{str}', 'PerizinanController@uploadFormulir');
+
+Route::get('uploaddokumenawal/{str}', 'PerizinanController@uploadDokumenAwal');
+
+Route::patch('uploaddokumenawal/{str}', 'PerizinanController@upload');
+
+Route::get('listformulir', 'PerizinanController@showListFormulir');
+
+Route::get('listizindisahkan/{str}', 'PerizinanController@showListIzinDiterbitkan');
+
+Route::get('detailformulir/{str}/{id}', 'PerizinanController@showDetailFormulir');
+
+Route::get('editformulir/{str}/{id}', 'PerizinanController@showEditFormulir');
+
+Route::patch('editformulir/{str}/{id}', 'PerizinanController@checkEditFormulir');
+
+Route::get('deleteformulir/{str}/{id}', 'PerizinanController@showDeleteFormulir');
+
+Route::get('verifikasiformulir/{str}/{id}', 'PerizinanController@showVerifikasiFormulir');
+
+Route::get('menyetujuiformulir/{str}/{id}', 'PerizinanController@showMenyetujuiFormulir');
+
+Route::get('verifikasikelengkapanformulir/{str}/{id}', 'PerizinanController@showVerifikasiFormulirLengkap');
+
+Route::get('menerbitkanformulir/{str}/{id}', 'PerizinanController@showMenerbitkanFormulir');
+
+Route::get('menolakformulir/{str}/{id}', 'PerizinanController@showMenolakFormulir');
+
+Route::get('menyembunyikanformulir/{str}/{id}', 'PerizinanController@showMenyembunyikanFormulir');
+
 
 Route::get('login', 'HomeController@login');
 

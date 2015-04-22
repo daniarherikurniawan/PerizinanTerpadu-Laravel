@@ -1,7 +1,7 @@
  @extends("layouts.masterfront")
 @section('content')
 	<div class="inline text-center" ><h3>Izin Gangguan (HO)</h3></div>
-	<br>
+	<br1>
 	<div class= "row">
 		<div class="span2"></div>
 		<div class= "span8">
